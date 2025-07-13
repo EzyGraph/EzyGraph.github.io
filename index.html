@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+	<head>
+		<title>Verificar Notas</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="author" content="E.S. Jesus">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<header>
+			<h1>Visualização das notas da Univesp</h1>
+			<h2>Insira as respectivas notas nos campos abaixo</h2>
+		</header>
+
+		<main class="mainBlock">
+			<form id="tabNotas">
+				<input type="text" id="n1" placeholder="Nota da prova (0.00)" maxlength="4">
+				<input type="text" id="n2" placeholder="Média do AVA (0.00)" maxlength="4"></br></br>
+				<input type="button" onclick="calcNotas()" id="ok" value="Calcular" href="#result">
+				<input type="reset" onclick="resetForm()" id="clear" value="Nova Consulta" href="#top">
+				<div id="result"></div>
+			</form>
+
+				<aside id="sideBlock">
+					<details>
+						<summary>Para você, aluno(a)</summary>
+						<p>
+						Esta é uma simples plataforma de consulta das possíveis notas bimestrais.<br>
+						<strong>Bons estudos!</strong>
+						</p>
+					</details><br>
+					<details>
+						<summary>Como funciona?</summary>
+						<p>
+						De acordo com os critérios de avaliação da Univesp, a Média Final é obtida através da
+						soma da Nota da prova regular (bimestral) com a Média das Notas do AVA.
+						A nota da prova regular tem peso maior, representando 60% da nota total, já
+						a média das notas do AVA tem peso de 40%.
+						Isso pode ser resumido com a seguinte fórmula:<br> <strong class="formula">MF = 0.6(N<sub>1</sub>) + 0.4(N<sub>2</sub>)</strong>,
+						onde <b class="formula">MF</b> é a Média Final, <b class="formula">N<sub>1</sub></b> é a nota da prova regular
+						e <b class="formula">N<sub>2</sub></b> é a média das notas do AVA.<br>
+						Aqueles que obtém nota igual ou superior a 5 são aprovados.
+						</p>
+					</details><br>
+					<details>
+						<summary>Sobre esta página</summary>
+						<p>
+						Esta página foi desenvolvida apenas para propósitos didáticos e não possui nenhum vínculo oficial com a
+						Universidade Virtual do Estado de São Paulo (Univesp). Para saber mais sobre a instituição, acesse
+						<a id="univespLink" href="https://univesp.br/institucional" target="_blank">aqui.</a>
+						</p>
+					</details>
+				</aside>
+			</main>
+
+			<footer>
+				<small>&copy 2025  E.S. Jesus</small>
+			</footer>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
